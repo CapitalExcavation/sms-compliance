@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Opt in to Capital Excavation SMS timecard notifications.">
+  <title>Opt In — Capital Excavation SMS Timecard Notifications</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="stripe" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true">
+          <rect width="34" height="34" rx="6" fill="#d97b06"/>
+          <path d="M7 24h20v3H7z" fill="#17191c"/>
+          <path d="M10 22l4-9h3l-2 5h5l2-5h3l-4 9z" fill="#17191c"/>
+        </svg>
+        <span class="brand-name">Capital Excavation<span class="brand-sub">SMS Program</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html">Overview</a>
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="help.html">Help</a>
+        <a href="campaign.html">Registration</a>
+        <a href="optin.html" class="nav-cta" aria-current="page">Opt In</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap wrap-narrow">
+    <p class="kicker">Opt In</p>
+    <h1>Sign up for SMS timecard notifications</h1>
+    <p>This form is for current Capital Excavation employees and authorized team members in field
+    leadership roles: foremen, superintendents, division managers, area managers, and payroll
+    administration. Your request is routed to Capital Excavation IT for enrollment. You can also
+    opt in verbally with your supervisor or Capital Excavation IT.</p>
+
+    <div class="disclosure">
+      By enrolling you agree to receive recurring SMS timecard notifications from Capital
+      Excavation. <strong>Message and data rates may apply. Message frequency varies.</strong>
+      Reply <strong>HELP</strong> for help or <strong>STOP</strong> to cancel at any time.
+      Consent is not a condition of employment. See our
+      <a href="terms.html">Terms &amp; Conditions</a> and <a href="privacy.html">Privacy Policy</a>.
+    </div>
+
+    <form id="optin-form" novalidate>
+      <div class="form-error-summary" id="form-error-summary" role="alert">
+        Please correct the highlighted fields below.
+      </div>
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="first-name">First name <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="first-name" name="first-name" autocomplete="given-name" required>
+          <span class="field-error">Enter your first name.</span>
+        </div>
+        <div class="form-field">
+          <label for="last-name">Last name <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="last-name" name="last-name" autocomplete="family-name" required>
+          <span class="field-error">Enter your last name.</span>
+        </div>
+        <div class="form-field">
+          <label for="phone">Mobile phone number <span class="req" aria-hidden="true">*</span></label>
+          <input type="tel" id="phone" name="phone" inputmode="tel" autocomplete="tel"
+                 placeholder="(555) 555-0100" required>
+          <span class="field-error">Enter a valid 10-digit U.S. mobile number.</span>
+        </div>
+        <div class="form-field">
+          <label for="role">Role <span class="req" aria-hidden="true">*</span></label>
+          <select id="role" name="role" required>
+            <option value="">Select your role&hellip;</option>
+            <option>Foreman</option>
+            <option>Superintendent</option>
+            <option>Division Manager</option>
+            <option>Area Manager</option>
+            <option>Payroll Administration</option>
+            <option>Other (authorized team member)</option>
+          </select>
+          <span class="field-error">Select your role.</span>
+        </div>
+        <div class="form-field full">
+          <label for="email">Work email (optional)</label>
+          <input type="email" id="email" name="email" autocomplete="email" placeholder="you@capitalexcavation.com">
+          <span class="field-error">Enter a valid email address.</span>
+        </div>
+      </div>
+
+      <div class="consent">
+        <input type="checkbox" id="consent" name="consent" required>
+        <label for="consent">I am a current Capital Excavation employee or authorized team member,
+        the mobile number above is my own, and I consent to receive recurring SMS timecard
+        notifications from Capital Excavation at that number, including timecard submission
+        reminders, approval deadline notices, escalation alerts, anomaly-flag reports, and payroll
+        export status updates. I understand that message and data rates may apply, message
+        frequency varies, consent is not a condition of employment, I can reply HELP for help or
+        STOP to cancel at any time, and my mobile opt-in data will not be shared with third
+        parties for marketing purposes. I agree to the
+        <a href="terms.html">Terms &amp; Conditions</a> and
+        <a href="privacy.html">Privacy Policy</a>.</label>
+      </div>
+      <div class="form-field">
+        <span class="field-error" id="consent-error">You must check the consent box to opt in.</span>
+      </div>
+
+      <button type="submit" class="btn btn-amber">Submit opt-in request</button>
+    </form>
+
+    <div class="confirmation" id="confirmation" role="status">
+      <h2>Opt-in request received</h2>
+      <p>Reference: <span class="ref" id="ref-code"></span></p>
+      <p>Your request has been prepared for Capital Excavation IT. If your email client opened,
+      send the pre-filled message to complete enrollment; otherwise, email
+      <a href="mailto:admin@capitalexcavation.com">admin@capitalexcavation.com</a> with your name and
+      mobile number, or tell your supervisor.</p>
+      <p>Once enrolled, you'll receive a one-time confirmation text: <em>"Thank you for opting in
+      to receive timecard notifications from Capital Excavation. Msg frequency varies. Msg &amp;
+      data rates may apply. Reply HELP for help. Reply STOP to opt out from receiving messages
+      from this number."</em></p>
+    </div>
+
+    <h2>Prefer to opt in another way?</h2>
+    <ul>
+      <li><strong>Verbally:</strong> give your mobile number to your supervisor or Capital Excavation IT and confirm you consent to timecard notification texts.</li>
+      <li><strong>By email:</strong> send your name, role, and mobile number to <a href="mailto:admin@capitalexcavation.com">admin@capitalexcavation.com</a>.</li>
+    </ul>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <div class="footer-cols">
+        <div>
+          <h4>Capital Excavation</h4>
+          <p>SMS timecard notification program for field leadership. 1-to-1 operational messages only — no marketing, no bulk messaging.</p>
+        </div>
+        <div>
+          <h4>Program</h4>
+          <ul>
+            <li><a href="optin.html">Opt in</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="help.html">Help &amp; FAQ</a></li>
+            <li><a href="campaign.html">Campaign Registration</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li>Reply <strong>HELP</strong> to any message</li>
+            <li>Email: <a href="mailto:admin@capitalexcavation.com">admin@capitalexcavation.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-legal">
+        Msg &amp; data rates may apply. Msg frequency varies. Reply HELP for help, STOP to cancel.
+        Mobile opt-in data is not shared with third parties for marketing purposes.
+        &copy; 2026 Capital Excavation. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/optin.js"></script>
+</body>
+</html>
