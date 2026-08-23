@@ -89,7 +89,7 @@
     confirmation.style.display = 'block';
     confirmation.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-    window.location.href = 'mailto:marshall@cloudmarsh.com' +
+    window.location.href = 'mailto:admin@capitalexcavation.com' +
       '?subject=' + encodeURIComponent('SMS opt-in request ' + ref) +
       '&body=' + encodeURIComponent(body);
   });
