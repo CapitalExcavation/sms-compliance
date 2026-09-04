@@ -1,0 +1,7 @@
+# Local environment / secrets
+.env
+
+# Scratch working notes (Twilio submission/rejection tracking)
+status.md
+twilio-edit.md
+twilio-rejection.md

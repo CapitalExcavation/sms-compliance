@@ -35,15 +35,17 @@
     <h1>Sign up for SMS timecard notifications</h1>
     <p>This form is for current Capital Excavation employees and authorized team members in field
     leadership roles: foremen, superintendents, division managers, area managers, and payroll
-    administration. Your request is routed to Capital Excavation IT for enrollment. You can also
-    opt in verbally with your supervisor or Capital Excavation IT.</p>
+    administration. SMS enrollment is entirely optional and is separate from employment, access
+    to the timecard system, and any other Capital Excavation service. Your request is routed to
+    Capital Excavation IT for enrollment. You can also opt in verbally with your supervisor or
+    Capital Excavation IT.</p>
 
     <div class="disclosure">
-      By enrolling you agree to receive recurring SMS timecard notifications from Capital
-      Excavation. <strong>Message and data rates may apply. Message frequency varies.</strong>
-      Reply <strong>HELP</strong> for help or <strong>STOP</strong> to cancel at any time.
-      Consent is not a condition of employment. See our
-      <a href="terms.html">Terms &amp; Conditions</a> and <a href="privacy.html">Privacy Policy</a>.
+      <strong>Optional SMS program:</strong> You may decline or skip SMS enrollment and continue
+      using Capital Excavation's timecard system, employment services, and normal support channels
+      without interruption. If you choose to enroll, message and data rates may apply and message
+      frequency varies. Reply <strong>HELP</strong> for help or <strong>STOP</strong> to cancel at
+      any time.
     </div>
 
     <form id="optin-form" novalidate>
@@ -88,23 +90,31 @@
       </div>
 
       <div class="consent">
-        <input type="checkbox" id="consent" name="consent" required>
+        <input type="checkbox" id="consent" name="consent">
         <label for="consent">I am a current Capital Excavation employee or authorized team member,
         the mobile number above is my own, and I consent to receive recurring SMS timecard
         notifications from Capital Excavation at that number, including timecard submission
         reminders, approval deadline notices, escalation alerts, anomaly-flag reports, and payroll
         export status updates. I understand that message and data rates may apply, message
-        frequency varies, consent is not a condition of employment, I can reply HELP for help or
-        STOP to cancel at any time, and my mobile opt-in data will not be shared with third
-        parties for marketing purposes. I agree to the
-        <a href="terms.html">Terms &amp; Conditions</a> and
-        <a href="privacy.html">Privacy Policy</a>.</label>
+        frequency varies, consent is optional and not a condition of employment or access to any
+        service, I can reply HELP for help or STOP to cancel at any time, and my mobile opt-in data
+        will not be shared with third parties for marketing purposes.</label>
       </div>
       <div class="form-field">
         <span class="field-error" id="consent-error">You must check the consent box to opt in.</span>
       </div>
 
-      <button type="submit" class="btn btn-amber">Submit opt-in request</button>
+      <p class="form-note">The checkbox above applies only to the optional SMS program. It is not
+      combined with acceptance of employment, account, purchase, transaction, or service terms.
+      Review the <a href="terms.html">SMS Terms &amp; Conditions</a> and
+      <a href="privacy.html">SMS Privacy Policy</a> separately.</p>
+
+      <div class="btn-row">
+        <button type="submit" class="btn btn-amber">Submit opt-in request</button>
+        <a href="index.html" class="btn btn-ghost">No thanks &mdash; continue without SMS</a>
+      </div>
+      <p class="form-note">Choosing "No thanks" submits no information and does not affect your
+      employment, account access, timecard access, services, purchases, or transactions.</p>
     </form>
 
     <div class="confirmation" id="confirmation" role="status">
@@ -122,9 +132,11 @@
 
     <h2>Prefer to opt in another way?</h2>
     <ul>
-      <li><strong>Verbally:</strong> give your mobile number to your supervisor or Capital Excavation IT and confirm you consent to timecard notification texts.</li>
-      <li><strong>By email:</strong> send your name, role, and mobile number to <a href="mailto:admin@capitalexcavation.com">admin@capitalexcavation.com</a>.</li>
+      <li><strong>Verbally:</strong> give your mobile number to your supervisor or Capital Excavation IT and explicitly confirm that you voluntarily consent to timecard notification texts.</li>
+      <li><strong>By email:</strong> send your name, role, mobile number, and the statement "I voluntarily consent to receive SMS timecard notifications from Capital Excavation" to <a href="mailto:admin@capitalexcavation.com">admin@capitalexcavation.com</a>.</li>
     </ul>
+    <p>These alternatives are also optional. Declining SMS does not affect employment or access to
+    the timecard system, services, accounts, purchases, or transactions.</p>
   </main>
 
   <footer class="site-footer">

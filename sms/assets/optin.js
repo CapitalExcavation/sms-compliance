@@ -79,9 +79,10 @@
       '\nConsent: I am a current Capital Excavation employee or authorized team member, the ' +
       'mobile number above is my own, and I consent to receive recurring SMS timecard ' +
       'notifications from Capital Excavation at that number. I understand msg & data rates may ' +
-      'apply, msg frequency varies, consent is not a condition of employment, and I can reply ' +
-      'HELP for help or STOP to cancel at any time.\n' +
-      'Agreed to Terms & Conditions and Privacy Policy at https://apps.capitalexcavation.com/sms/\n' +
+      'apply, msg frequency varies, consent is optional and not a condition of employment or ' +
+      'access to any service, and I can reply HELP for help or STOP to cancel at any time.\n' +
+      'SMS consent was collected separately from all employment, account, purchase, transaction, ' +
+      'and service terms.\n' +
       'Consent recorded: ' + new Date().toISOString();
 
     document.getElementById('ref-code').textContent = ref;
