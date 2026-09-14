@@ -76,13 +76,12 @@
       'Mobile number: ' + formatted + '\n' +
       'Role: ' + role.value + '\n' +
       (email.value.trim() ? 'Work email: ' + email.value.trim() + '\n' : '') +
-      '\nConsent: I am a current Capital Excavation employee or authorized team member, the ' +
-      'mobile number above is my own, and I consent to receive recurring SMS timecard ' +
-      'notifications from Capital Excavation at that number. I understand msg & data rates may ' +
-      'apply, msg frequency varies, consent is not a condition of employment, and I can reply ' +
-      'HELP for help or STOP to cancel at any time.\n' +
-      'Agreed to Terms & Conditions and Privacy Policy at https://apps.capitalexcavation.com/sms/\n' +
-      'Consent recorded: ' + new Date().toISOString();
+      '\nConsent: I choose to receive recurring SMS timecard notifications from Capital Excavation at the mobile number provided, including submission reminders, approval notices, escalation alerts, anomaly reports, and payroll export updates. Message frequency varies. Message and data rates may apply. Reply STOP to unsubscribe or HELP for assistance.\n' +
+      'Enrollment is optional and does not affect employment, timecard access, submission, approval, or payroll processing.\n' +
+      'Privacy Policy: https://capitalexcavation.github.io/sms-compliance/sms/privacy.html\n' +
+      'Terms and Conditions: https://capitalexcavation.github.io/sms-compliance/sms/terms.html\n' +
+      'Method: Web form email request\n' +
+      'Request prepared: ' + new Date().toISOString();
 
     document.getElementById('ref-code').textContent = ref;
     form.style.display = 'none';
