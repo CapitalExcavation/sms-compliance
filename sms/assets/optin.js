@@ -84,6 +84,9 @@
       'Request prepared: ' + new Date().toISOString();
 
     document.getElementById('ref-code').textContent = ref;
+    // Show the request text verbatim so the consent record survives a mailto: that never opens.
+    var record = document.getElementById('consent-record');
+    if (record) record.textContent = body;
     form.style.display = 'none';
     confirmation.style.display = 'block';
     confirmation.scrollIntoView({ behavior: 'smooth', block: 'start' });

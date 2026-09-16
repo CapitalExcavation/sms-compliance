@@ -297,6 +297,18 @@ input:focus, select:focus, textarea:focus {
 }
 .consent label { font-weight: 400; font-size: 0.9rem; color: var(--steel); line-height: 1.55; }
 .form-note { color: var(--steel); font-size: 0.88rem; line-height: 1.55; margin: 0.75rem 0; }
+.consent-record {
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: var(--paper, #f6f7f8);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--ink);
+  overflow-x: auto;
+}
 .field-error {
   color: #b91c1c;
   font-size: 0.82rem;
