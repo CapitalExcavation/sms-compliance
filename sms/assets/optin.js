@@ -78,9 +78,9 @@
       (email.value.trim() ? 'Work email: ' + email.value.trim() + '\n' : '') +
       '\nConsent: I choose to receive recurring SMS timecard notifications from Capital Excavation at the mobile number provided, including submission reminders, approval notices, escalation alerts, anomaly reports, and payroll export updates. Message frequency varies. Message and data rates may apply. Reply STOP to unsubscribe or HELP for assistance.\n' +
       'Enrollment is optional and does not affect employment, timecard access, submission, approval, or payroll processing.\n' +
-      'Privacy Policy: https://capitalexcavation.github.io/sms-compliance/sms/privacy.html\n' +
-      'Terms and Conditions: https://capitalexcavation.github.io/sms-compliance/sms/terms.html\n' +
-      'Method: Web form email request\n' +
+      'Privacy Policy: https://sms.capitalexcavation.com/sms/privacy.html\n' +
+      'Terms and Conditions: https://sms.capitalexcavation.com/sms/terms.html\n' +
+      'Method: Web opt-in form at https://sms.capitalexcavation.com/sms/optin.html (standalone consent checkbox)\n' +
       'Request prepared: ' + new Date().toISOString();
 
     document.getElementById('ref-code').textContent = ref;
