@@ -6,7 +6,7 @@
 
   var summary = document.getElementById('form-error-summary');
   var confirmation = document.getElementById('confirmation');
-  var consentError = document.getElementById('consent-error');
+  var declined = document.getElementById('declined');
 
   function fieldWrap(input) {
     return input.closest('.form-field');
@@ -37,6 +37,19 @@
     var email = document.getElementById('email');
     var consent = document.getElementById('consent');
 
+    // This form must be completable without a phone number or SMS consent.
+    if (!consent.checked) {
+      summary.style.display = 'none';
+      [firstName, lastName, phone, role, email].forEach(function (input) {
+        setInvalid(input, false);
+      });
+      form.reset();
+      form.style.display = 'none';
+      declined.style.display = 'block';
+      declined.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return;
+    }
+
     var invalid = [];
 
     setInvalid(firstName, !firstName.value.trim());
@@ -54,9 +67,6 @@
     var emailBad = email.value.trim() !== '' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
     setInvalid(email, emailBad);
     if (emailBad) invalid.push(email);
-
-    consentError.style.display = consent.checked ? 'none' : 'block';
-    if (!consent.checked) invalid.push(consent);
 
     if (invalid.length) {
       summary.style.display = 'block';

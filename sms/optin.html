@@ -36,7 +36,8 @@
     <p>This form is the only way to enroll in Capital Excavation's SMS timecard notification
     program. It is for current Capital Excavation employees and authorized team members in field
     leadership roles: foremen, superintendents, division managers, area managers, and payroll
-    administration. Your request is routed to Capital Excavation IT for enrollment.</p>
+    administration. You can complete this form without opting in; an enrollment request is
+    prepared only if you choose SMS notifications.</p>
 
     <div class="disclosure">
       <strong>SMS enrollment is optional.</strong> You may skip this form and continue using the
@@ -55,24 +56,24 @@
       </div>
       <div class="form-grid">
         <div class="form-field">
-          <label for="first-name">First name <span class="req" aria-hidden="true">*</span></label>
-          <input type="text" id="first-name" name="first-name" autocomplete="given-name" required>
+          <label for="first-name">First name (for SMS enrollment only)</label>
+          <input type="text" id="first-name" name="first-name" autocomplete="given-name">
           <span class="field-error">Enter your first name.</span>
         </div>
         <div class="form-field">
-          <label for="last-name">Last name <span class="req" aria-hidden="true">*</span></label>
-          <input type="text" id="last-name" name="last-name" autocomplete="family-name" required>
+          <label for="last-name">Last name (for SMS enrollment only)</label>
+          <input type="text" id="last-name" name="last-name" autocomplete="family-name">
           <span class="field-error">Enter your last name.</span>
         </div>
         <div class="form-field">
-          <label for="phone">Mobile phone number <span class="req" aria-hidden="true">*</span></label>
+          <label for="phone">Mobile phone number (for SMS enrollment only)</label>
           <input type="tel" id="phone" name="phone" inputmode="tel" autocomplete="tel"
-                 placeholder="(555) 555-0100" required>
+                 placeholder="(555) 555-0100">
           <span class="field-error">Enter a valid 10-digit U.S. mobile number.</span>
         </div>
         <div class="form-field">
-          <label for="role">Role <span class="req" aria-hidden="true">*</span></label>
-          <select id="role" name="role" required>
+          <label for="role">Role (for SMS enrollment only)</label>
+          <select id="role" name="role">
             <option value="">Select your role&hellip;</option>
             <option>Foreman</option>
             <option>Superintendent</option>
@@ -90,27 +91,35 @@
         </div>
       </div>
 
-      <p class="form-note">This checkbox is the only thing on this page that collects SMS consent.
+      <p class="form-note">All fields and the SMS consent checkbox are optional if you do not
+      want to enroll. Select &ldquo;Continue with my choice&rdquo; with the box unchecked to finish
+      without sending or storing anything. If you want SMS, check the box and provide your name,
+      mobile number, and role; those details are needed only to prepare your enrollment request.
+      This checkbox is the only thing on this page that collects SMS consent.
       It stands alone: it is not combined with acceptance of the Terms &amp; Conditions, the
-      Privacy Policy, employment terms, account creation, a purchase, or a transaction. Leave it
-      unchecked if you do not want text messages.</p>
+      Privacy Policy, employment terms, account creation, a purchase, or a transaction.</p>
       <div class="consent">
         <input type="checkbox" id="consent" name="consent">
         <label for="consent">I choose to receive recurring SMS timecard notifications from Capital Excavation at the mobile number provided, including submission reminders, approval notices, escalation alerts, anomaly reports, and payroll export updates. Message frequency varies. Message and data rates may apply. Reply STOP to unsubscribe or HELP for assistance.</label>
       </div>
-      <div class="form-field">
-        <span class="field-error" id="consent-error">Check the box above to enroll, or choose &ldquo;No thanks&rdquo; to skip SMS enrollment.</span>
-      </div>
-
       <p class="form-note">See our <a href="terms.html">Terms &amp; Conditions</a> and <a href="privacy.html">Privacy Policy</a>. Capital Excavation does not sell, rent, or share mobile opt-in data or consent with third parties or affiliates for any purpose.</p>
       <div class="btn-row">
-        <button type="submit" class="btn btn-amber">Prepare opt-in email</button>
+        <button type="submit" class="btn btn-amber">Continue with my choice</button>
         <a href="index.html" class="btn btn-ghost" id="skip-sms">No thanks &mdash; skip SMS enrollment</a>
       </div>
-      <p class="form-note">Choosing &ldquo;No thanks&rdquo; sends nothing and enrolls you in nothing.
+      <p class="form-note">Continuing with the box unchecked, or choosing &ldquo;No thanks&rdquo;,
+      sends nothing and enrolls you in nothing.
       Your employment, timecard access, timecard submission and approval, payroll, and every other
       Capital Excavation service continue unchanged.</p>
     </form>
+
+    <div class="confirmation" id="declined" role="status">
+      <h2>No SMS enrollment requested</h2>
+      <p>You completed this form without opting in. No information was sent or stored, and you
+      will not be enrolled in SMS notifications. You can continue using all Capital Excavation
+      services as before.</p>
+      <p><a href="index.html">Return to the SMS program overview</a></p>
+    </div>
 
     <div class="confirmation" id="confirmation" role="status">
       <h2>Opt-in email prepared</h2>
